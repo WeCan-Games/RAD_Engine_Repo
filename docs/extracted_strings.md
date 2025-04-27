@@ -1,0 +1,3 @@
+# Extracted Strings
+
+(Strings list)

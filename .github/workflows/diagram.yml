@@ -1,0 +1,16 @@
+name: Render Mermaid Diagrams
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Mermaid CLI Render
+        run: |
+          npm install -g @mermaid-js/mermaid-cli
+          mmdc -i diagrams/system_class_diagram.mmd -o diagrams/system_class_diagram.png
